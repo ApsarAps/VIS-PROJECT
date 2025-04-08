@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Logo from "/src/assets/VIS New Layouts Images/logo1.png";
 
@@ -18,6 +18,9 @@ const linkVariants = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
+
   const navLinks = [
     { label: "About Us", to: "/about" },
     { label: "Web Development", to: "/web-development" },
@@ -35,7 +38,6 @@ const Navbar = () => {
       className="w-full fixed top-0 left-0 bg-white shadow-lg z-50"
     >
       <div className="max-w-[1280px] mx-auto px-4 py-4 flex flex-col md:flex-row items-center md:justify-between">
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -52,8 +54,6 @@ const Navbar = () => {
             />
           </Link>
         </motion.div>
-
-        {/* Hamburger Menu (small screen - right) */}
         <div className="md:hidden flex items-center justify-end w-full">
           <button
             className="text-gray-700"
@@ -67,12 +67,10 @@ const Navbar = () => {
             </div>
           </button>
         </div>
-
-        {/* Navigation Links */}
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } md:flex flex-col md:flex-row items-center gap-4 lg:gap-12 font-medium text-lg text-gray-700 md:block`}
+          } md:flex flex-col md:flex-row items-center gap-4 lg:gap-12 font-medium text-lg text-gray-700 `}
         >
           {navLinks.map((item, i) => (
             <motion.div
@@ -85,10 +83,18 @@ const Navbar = () => {
             >
               <Link
                 to={item.to}
-                className="hover:text-[#0057FF] transition-colors duration-300"
+                className={`transition-colors duration-300 ${
+                  pathname === item.to
+                    ? "text-[#0057FF] font-semibold"
+                    : "hover:text-[#0057FF]"
+                }`}
               >
                 {item.label}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#0057FF] group-hover:w-full transition-all duration-300 origin-left"></span>
+                <span
+                  className={`absolute left-0 -bottom-1 h-0.5 bg-[#0057FF] transition-all duration-300 origin-left ${
+                    pathname === item.to ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
               </Link>
             </motion.div>
           ))}

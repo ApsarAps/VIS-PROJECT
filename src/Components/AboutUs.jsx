@@ -57,7 +57,7 @@ const iconPulse = {
 
 const AboutUs = () => {
   return (
-    <section className="px-6 mt-20 py-15 md:px-20 bg-white text-black overflow-hidden">
+    <section className="px-6 mt-20 py-20 md:px-20 bg-white text-black overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20"
         variants={container}

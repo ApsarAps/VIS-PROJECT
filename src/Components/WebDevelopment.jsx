@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-// Import your images here
 import MonitorImage from "/src/assets/VIS New Layouts Images/VIS web development.png";
 import StaticImg from "/src/assets/VIS New Layouts Images/Static web gif.png";
 import DynamicImg from "/src/assets/VIS New Layouts Images/dyanamic gif.png";
@@ -24,8 +22,7 @@ const WebDevelopment = () => {
   };
 
   return (
-    <section className="bg-white text-black px-6 md:px-20 py-20 mt-16">
-      {/* Web Development Intro */}
+    <section className="bg-white text-black px-6 py-20 mt-18  md:px-20 ">
       <motion.div
         variants={fadeInUp}
         initial="hidden"
@@ -33,10 +30,40 @@ const WebDevelopment = () => {
         transition={{ duration: 0.6 }}
         className="grid md:grid-cols-2 gap-10 items-center"
       >
-        <motion.div variants={fadeInLeft} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.2 }}>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            <span className="text-[#0057FF]">Web</span> Development
-          </h2>
+        <motion.div
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <motion.h2
+            className="text-2xl md:text-3xl font-bold mb-4 tracking-tight  md:text-left"
+            initial={{ opacity: 0, scale: 0.8, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.4,
+              delay: 0.1,
+            }}
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              className="text-[#0057FF] inline-block drop-shadow-sm"
+            >
+              Web
+            </motion.span>{" "}
+            <motion.span
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+              className="text-gray-900"
+            >
+              Development
+            </motion.span>
+          </motion.h2>
           <motion.p
             variants={fadeInUp}
             initial="hidden"
@@ -44,10 +71,11 @@ const WebDevelopment = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mb-4 text-gray-800 text-lg leading-relaxed"
           >
-            Give Better Visibility to your Business with the Dynamic & Responsive Websites to reach
-            Millions of People and Boost your Business!!! Give a Try to launch your website within 2
-            Days.. !!! Vetri IT Systems Provides a Website within 2 Days..!!! Connect with Us to
-            Boost Your Business Today!!!
+            Give Better Visibility to your Business with the Dynamic &
+            Responsive Websites to reach Millions of People and Boost your
+            Business!!! Give a Try to launch your website within 2 Days.. !!!
+            Vetri IT Systems Provides a Website within 2 Days..!!! Connect with
+            Us to Boost Your Business Today!!!
           </motion.p>
           <motion.p
             variants={fadeInUp}
@@ -56,11 +84,12 @@ const WebDevelopment = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-gray-800 text-lg leading-relaxed"
           >
-            We provide end-to-end website development services, starting with intuitive web design
-            layouts that ensure a seamless user experience. Our process includes responsive design,
-            front-end and back-end development, rigorous testing, and optimization for speed and
-            security. From concept to launch, we deliver high-quality websites tailored to your
-            business needs.
+            We provide end-to-end website development services, starting with
+            intuitive web design layouts that ensure a seamless user experience.
+            Our process includes responsive design, front-end and back-end
+            development, rigorous testing, and optimization for speed and
+            security. From concept to launch, we deliver high-quality websites
+            tailored to your business needs.
           </motion.p>
         </motion.div>
         <motion.div
@@ -70,11 +99,13 @@ const WebDevelopment = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex justify-center"
         >
-          <img src={MonitorImage} alt="monitor" className="w-[300px] md:w-[380px]" />
+          <img
+            src={MonitorImage}
+            alt="monitor"
+            className="w-[300px] md:w-[380px]"
+          />
         </motion.div>
       </motion.div>
-
-      {/* Static Website */}
       <motion.div
         variants={fadeInLeft}
         initial="hidden"
@@ -82,10 +113,41 @@ const WebDevelopment = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="grid md:grid-cols-2 gap-10 mt-10 items-center"
       >
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.3 }}>
-          <h3 className="text-xl md:text-2xl font-bold mb-2">
-            <span className="text-[#0057FF]">Static</span> Website
-          </h3>
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.h3
+            className="text-xl md:text-2xl font-bold mb-2 tracking-tight  md:text-left"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.3,
+              delay: 0.1,
+            }}
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="text-[#0057FF] inline-block drop-shadow-sm"
+            >
+              Static
+            </motion.span>{" "}
+            <motion.span
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              className="text-gray-900"
+            >
+              Website
+            </motion.span>
+          </motion.h3>
+
           <motion.p
             variants={fadeInUp}
             initial="hidden"
@@ -93,10 +155,11 @@ const WebDevelopment = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-gray-800 text-lg leading-relaxed"
           >
-            A static website is a simple and reliable solution for service-based projects. It
-            delivers content quickly without relying on databases or dynamic processing. Ideal for
-            portfolios, company profiles, or informational pages, it ensures fast performance and
-            low maintenance costs.
+            A static website is a simple and reliable solution for service-based
+            projects. It delivers content quickly without relying on databases
+            or dynamic processing. Ideal for portfolios, company profiles, or
+            informational pages, it ensures fast performance and low maintenance
+            costs.
           </motion.p>
         </motion.div>
         <motion.img
@@ -109,8 +172,6 @@ const WebDevelopment = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         />
       </motion.div>
-
-      {/* Dynamic Website */}
       <motion.div
         variants={fadeInRight}
         initial="hidden"
@@ -127,10 +188,40 @@ const WebDevelopment = () => {
           whileInView="visible"
           transition={{ duration: 0.8, delay: 0.4 }}
         />
-        <motion.div variants={fadeInLeft} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.3 }}>
-          <h3 className="text-xl md:text-2xl font-bold mb-2">
-            <span className="text-[#0057FF]">Dynamic</span> Website
-          </h3>
+        <motion.div
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.h3
+            className="text-xl md:text-2xl font-bold mb-2 tracking-tight  md:text-left"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.3,
+              delay: 0.1,
+            }}
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="text-[#0057FF] inline-block drop-shadow-sm"
+            >
+              Dynamic
+            </motion.span>{" "}
+            <motion.span
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              className="text-gray-900"
+            >
+              Website
+            </motion.span>
+          </motion.h3>
           <motion.p
             variants={fadeInUp}
             initial="hidden"
@@ -138,16 +229,15 @@ const WebDevelopment = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-gray-800 text-lg leading-relaxed"
           >
-            A dynamic website is an interactive platform that updates content in real time based on
-            user inputs or actions. It uses databases and server-side scripting to deliver
-            personalized experiences, making it ideal for service projects like user portals,
-            e-commerce sites, or dashboards. Dynamic websites enhance engagement and provide
+            A dynamic website is an interactive platform that updates content in
+            real time based on user inputs or actions. It uses databases and
+            server-side scripting to deliver personalized experiences, making it
+            ideal for service projects like user portals, e-commerce sites, or
+            dashboards. Dynamic websites enhance engagement and provide
             scalable, efficient solutions for modern businesses.
           </motion.p>
         </motion.div>
       </motion.div>
-
-      {/* E-Commerce Website */}
       <motion.div
         variants={fadeInLeft}
         initial="hidden"
@@ -155,10 +245,40 @@ const WebDevelopment = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="grid md:grid-cols-2 gap-10 mt-5 items-center"
       >
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" transition={{ duration: 0.7, delay: 0.3 }}>
-          <h3 className="text-xl md:text-2xl font-bold mb-2">
-            <span className="text-[#0057FF]">E-Commerce</span> Website
-          </h3>
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          <motion.h3
+            className="text-xl md:text-2xl font-bold mb-2 tracking-tight  md:text-left"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.3,
+              delay: 0.1,
+            }}
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="text-[#0057FF] inline-block drop-shadow-sm"
+            >
+              E-Commerce
+            </motion.span>{" "}
+            <motion.span
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              className="text-gray-900"
+            >
+              Website
+            </motion.span>
+          </motion.h3>
           <motion.p
             variants={fadeInUp}
             initial="hidden"
@@ -166,11 +286,12 @@ const WebDevelopment = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-gray-800 text-lg leading-relaxed"
           >
-            An e-commerce website serves as a digital storefront, enabling businesses to showcase
-            and sell products or services online. With secure payment gateways, intuitive
-            navigation, and a seamless user experience, it ensures efficient transactions and
-            customer satisfaction. Tailored to your business needs, it drives sales and enhances
-            brand visibility.
+            An e-commerce website serves as a digital storefront, enabling
+            businesses to showcase and sell products or services online. With
+            secure payment gateways, intuitive navigation, and a seamless user
+            experience, it ensures efficient transactions and customer
+            satisfaction. Tailored to your business needs, it drives sales and
+            enhances brand visibility.
           </motion.p>
         </motion.div>
         <motion.img
