@@ -9,6 +9,8 @@ import analytics from "/src/assets/VIS New Layouts Images/Google Analytics1.gif"
 import email from "/src/assets/VIS New Layouts Images/Email-Marketing gif.gif";
 import video from "/src/assets/VIS New Layouts Images/Video Marketing gif.gif";
 import GoogleAd from "/src/assets/VIS New Layouts Images/Google ad gif.gif";
+import PricingSection from "./PricingSection";
+import { DigitalPlans } from "./PricingData";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -558,6 +560,14 @@ const DigitalMarketing = () => {
           alt="Email Marketing"
           className="w-full max-w-sm mx-auto"
         />
+      </motion.div>
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <PricingSection title="Digital Marketing Plans" plans={DigitalPlans} />
       </motion.div>
     </section>
   );

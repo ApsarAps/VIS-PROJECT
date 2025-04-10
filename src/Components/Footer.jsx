@@ -37,9 +37,9 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-[#0057FF] text-white px-6 py-10 "
+      className="bg-[#0057FF] text-white px-4 sm:px-6 md:px-10 py-10"
     >
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm md:text-base">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 text-sm md:text-base">
         <motion.div
           custom={0}
           initial="hidden"
@@ -47,11 +47,12 @@ const Footer = () => {
           viewport={{ once: false, amount: 0.3 }}
           variants={columnVariants}
         >
-          <h2 className="text-white font-bold text-2xl leading-tight mb-2">
+          <h2 className="text-white font-bold text-2xl leading-tight mb-1 sm:mb-2">
             Vetri
           </h2>
           <h2 className="text-white font-bold text-2xl mb-6">IT Systems</h2>
         </motion.div>
+
         <motion.div
           custom={1}
           initial="hidden"
@@ -59,7 +60,9 @@ const Footer = () => {
           viewport={{ once: false, amount: 0.3 }}
           variants={columnVariants}
         >
-          <h3 className="font-bold text-black text-lg mb-4">Quick Links</h3>
+          <h3 className="font-bold text-black text-lg mb-3 sm:mb-4">
+            Quick Links
+          </h3>
           <ul className="space-y-2 text-white">
             {[
               "About Us",
@@ -81,6 +84,7 @@ const Footer = () => {
             ))}
           </ul>
         </motion.div>
+
         <motion.div
           custom={2}
           initial="hidden"
@@ -88,19 +92,21 @@ const Footer = () => {
           viewport={{ once: false, amount: 0.3 }}
           variants={columnVariants}
         >
-          <h3 className="text-black font-bold text-lg mb-4">Contact Details</h3>
+          <h3 className="text-black font-bold text-lg mb-3 sm:mb-4">
+            Contact Details
+          </h3>
           <ul className="space-y-4 text-white">
-            <li className="flex items-center space-x-3">
+            <li className="flex items-center gap-3 flex-wrap">
               <FaPhoneAlt />
               <span>8438558627, 8438558527</span>
             </li>
-            <li className="flex items-center space-x-3">
+            <li className="flex items-center gap-3 flex-wrap">
               <FaEnvelope />
               <span>business@vetriit.com</span>
             </li>
-            <li className="flex items-start space-x-3">
+            <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="mt-1" />
-              <span>
+              <span className="leading-snug">
                 VTS & VIS, April’s Complex,
                 <br />
                 Shanthi Complex, Surandai.
@@ -108,6 +114,7 @@ const Footer = () => {
             </li>
           </ul>
         </motion.div>
+
         <motion.div
           custom={3}
           initial="hidden"
@@ -115,8 +122,10 @@ const Footer = () => {
           viewport={{ once: false, amount: 0.3 }}
           variants={columnVariants}
         >
-          <h3 className="text-black font-bold text-lg mb-4">Follow Us</h3>
-          <div className="flex items-center space-x-4 text-white text-xl">
+          <h3 className="text-black font-bold text-lg mb-3 sm:mb-4">
+            Follow Us
+          </h3>
+          <div className="flex items-center gap-4 text-white text-xl">
             {[FaInstagram, FaLinkedinIn, FaFacebookF].map((Icon, i) => (
               <motion.a
                 key={i}

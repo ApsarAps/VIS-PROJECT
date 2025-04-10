@@ -8,7 +8,7 @@ const container = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.3, 
+      staggerChildren: 0.3,
     },
   },
 };
@@ -80,10 +80,11 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Vetri IT Systems is a dynamic IT solutions provider, specializing in cutting-edge
-            technology services. We deliver innovative software development, IT consulting, and
-            digital transformation solutions tailored to meet diverse business needs. Committed to
-            excellence, we empower organizations with reliable, scalable, and cost-effective
+            Vetri IT Systems is a dynamic IT solutions provider, specializing in
+            cutting-edge technology services. We deliver innovative software
+            development, IT consulting, and digital transformation solutions
+            tailored to meet diverse business needs. Committed to excellence, we
+            empower organizations with reliable, scalable, and cost-effective
             technology solutions.
           </motion.p>
         </motion.div>
@@ -132,12 +133,13 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            To be a globally recognized leader in delivering innovative IT solutions that transform
-            businesses and create a sustainable impact. We envision a future where technology
-            seamlessly empowers organizations to achieve their goals, enhance customer experiences,
-            and drive growth. By staying ahead of emerging trends and fostering creativity, we aim
-            to set new benchmarks in the IT industry, contributing to a digitally connected and
-            efficient world.
+            To be a globally recognized leader in delivering innovative IT
+            solutions that transform businesses and create a sustainable impact.
+            We envision a future where technology seamlessly empowers
+            organizations to achieve their goals, enhance customer experiences,
+            and drive growth. By staying ahead of emerging trends and fostering
+            creativity, we aim to set new benchmarks in the IT industry,
+            contributing to a digitally connected and efficient world.
           </motion.p>
         </motion.div>
         <motion.div
@@ -167,13 +169,15 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            At Vetri IT Systems, our mission is to harness the power of technology to enable
-            businesses to unlock their full potential. We are committed to providing tailored,
-            cutting-edge solutions that address complex challenges, streamline operations, and
-            enhance productivity. By prioritizing quality, collaboration, and customer satisfaction,
-            we strive to build long-lasting partnerships based on trust and innovation. Our
-            dedication extends to nurturing talent, embracing diversity, and fostering a culture of
-            continuous learning and improvement to deliver excellence at every step.
+            At Vetri IT Systems, our mission is to harness the power of
+            technology to enable businesses to unlock their full potential. We
+            are committed to providing tailored, cutting-edge solutions that
+            address complex challenges, streamline operations, and enhance
+            productivity. By prioritizing quality, collaboration, and customer
+            satisfaction, we strive to build long-lasting partnerships based on
+            trust and innovation. Our dedication extends to nurturing talent,
+            embracing diversity, and fostering a culture of continuous learning
+            and improvement to deliver excellence at every step.
           </motion.p>
         </motion.div>
       </motion.div>

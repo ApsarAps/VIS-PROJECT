@@ -4,6 +4,8 @@ import MonitorImage from "/src/assets/VIS New Layouts Images/VIS web development
 import StaticImg from "/src/assets/VIS New Layouts Images/Static web gif.png";
 import DynamicImg from "/src/assets/VIS New Layouts Images/dyanamic gif.png";
 import EcommerceImg from "/src/assets/VIS New Layouts Images/ecommerce gif.png";
+import PricingSection from "./PricingSection";
+import { webPlans } from "./PricingData";
 
 const WebDevelopment = () => {
   const fadeInUp = {
@@ -303,6 +305,14 @@ const WebDevelopment = () => {
           whileInView="visible"
           transition={{ duration: 0.8, delay: 0.5 }}
         />
+      </motion.div>
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <PricingSection title="Web Development Plans" plans={webPlans} />
       </motion.div>
     </section>
   );
