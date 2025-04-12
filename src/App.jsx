@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import HomePage from "./Components/HomePage";
-import AboutUs from "./Components/AboutUs";
-import WebDevelopment from "./Components/WebDevelopment";
-import SoftwareDevelopment from "./Components/SoftwareDevelopment";
-import DigitalMarketing from "./Components/DigitalMarketing";
-import ScrollToTop from "./Components/ScrollToTop";
+import Footer from "./Components/FrontEnd/Footer";
+import Navbar from "./Components/FrontEnd/Navbar";
+import HomePage from "./Components/FrontEnd/HomePage";
+import AboutUs from "./Components/FrontEnd/AboutUs";
+import WebDevelopment from "./Components/FrontEnd/WebDevelopment";
+import SoftwareDevelopment from "./Components/FrontEnd/SoftwareDevelopment";
+import DigitalMarketing from "./Components/FrontEnd/DigitalMarketing";
+import ScrollToTop from "./Components/FrontEnd/ScrollToTop";
 
 function App() {
   return (

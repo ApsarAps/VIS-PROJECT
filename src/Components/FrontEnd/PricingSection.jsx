@@ -18,7 +18,7 @@ const PricingSection = ({ heading = "Plans", plans = [] }) => {
         {heading} <span className="text-[#0057FF]">&</span> Pricing
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-10 lg:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-stretch gap-6 sm:gap-8 px-4 sm:px-6 md:px-10 lg:px-20">
         {plans?.map((plan, index) => (
           <motion.div
             key={index}

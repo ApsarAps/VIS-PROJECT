@@ -1,3 +1,5 @@
+import { useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import {
   FaTimes,
@@ -37,6 +39,42 @@ const fieldVariants = {
 };
 
 const EnquiryForm = ({ onClose }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    service: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/enquiry/submit/",
+        formData
+      );
+      if (response.status === 201) {
+        alert("Enquiry submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          service: "",
+        });
+        onClose();
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Failed to submit enquiry.");
+    }
+  };
+
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center backdrop-brightness-50 bg-opacity-40 px-4"
@@ -61,22 +99,28 @@ const EnquiryForm = ({ onClose }) => {
           Quick <span className="text-[#0057FF]">Enquiry</span>
         </h2>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           {[
             {
               icon: <FaUser />,
               placeholder: "Enter Name",
               type: "text",
+              name: "name",
+              value: formData.name,
             },
             {
               icon: <FaEnvelope />,
               placeholder: "Enter Mail Id",
               type: "email",
+              name: "email",
+              value: formData.email,
             },
             {
               icon: <FaPhone />,
               placeholder: "Enter Mobile Number",
               type: "tel",
+              name: "phone",
+              value: formData.phone,
             },
           ].map((field, i) => (
             <motion.div
@@ -92,6 +136,9 @@ const EnquiryForm = ({ onClose }) => {
               </span>
               <input
                 type={field.type}
+                name={field.name}
+                value={field.value}
+                onChange={handleChange}
                 placeholder={field.placeholder}
                 className="w-full pl-10 pr-4 py-2 border rounded focus:outline-none focus:ring-2 border-sky-300 focus:ring-sky-300"
               />
@@ -107,6 +154,9 @@ const EnquiryForm = ({ onClose }) => {
           >
             <FaComments className="absolute top-3 left-3 text-[#0057FF]" />
             <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Send a Message"
               className="w-full min-h-[100px] pl-10 pr-4 py-2 border border-sky-300 rounded focus:outline-none focus:ring-2 focus:ring-sky-300"
             ></textarea>
@@ -119,9 +169,14 @@ const EnquiryForm = ({ onClose }) => {
             initial="hidden"
             animate="visible"
           >
-            <FaLaptopCode className="absolute top-3 text-[#0057FF] left-3 " />
-            <select className="w-full pl-10 pr-4 py-2 border border-sky-300 rounded focus:outline-none focus:ring-2 focus:ring-sky-300">
-              <option>Select a Service</option>
+            <FaLaptopCode className="absolute top-3 text-[#0057FF] left-3" />
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full pl-10 pr-4 py-2 border border-sky-300 rounded focus:outline-none focus:ring-2 focus:ring-sky-300"
+            >
+              <option value="">Select a Service</option>
               <option>Web Development</option>
               <option>App Development</option>
               <option>Marketing</option>

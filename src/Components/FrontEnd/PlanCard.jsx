@@ -28,7 +28,7 @@ const PlanCard = ({ planName, price, features }) => {
         type: "spring",
         stiffness: 100,
       }}
-      className="bg-[#E3EDFF] w-full max-w-[360px] md:max-w-sm rounded-b-full shadow-xl flex flex-col items-center overflow-hidden mx-auto"
+      className="bg-[#E3EDFF] w-full max-w-[360px] md:max-w-sm rounded-b-full shadow-xl flex flex-col items-center overflow-hidden mx-auto min-h-[680px]"
     >
       <div className="relative w-full h-28 sm:h-32 bg-[#0057FF] rounded-b-full flex items-center justify-center">
         <motion.h3
@@ -44,7 +44,9 @@ const PlanCard = ({ planName, price, features }) => {
           animate="animate"
           className="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-300 w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center rounded-full shadow-xl border-2 border-white z-10"
         >
-          <p className="text-black text-base sm:text-lg font-bold text-center">₹{price}</p>
+          <p className="text-black text-base sm:text-lg font-bold text-center">
+            ₹{price}
+          </p>
         </motion.div>
       </div>
 
@@ -58,7 +60,7 @@ const PlanCard = ({ planName, price, features }) => {
             transition: { delay: 0.7, staggerChildren: 0.1 },
           },
         }}
-        className="mt-14 px-4 sm:px-6 py-6 sm:py-8 space-y-3 text-sm sm:text-base font-semibold text-black"
+        className="mt-14 px-4 sm:px-6 py-6 sm:py-8 space-y-3 text-sm sm:text-base font-semibold text-black flex-grow"
       >
         {features.map((feature, idx) => (
           <motion.li
