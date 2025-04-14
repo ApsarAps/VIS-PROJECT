@@ -8,16 +8,29 @@ class EnquirySubmitView(APIView):
     def post(self, request):
         name = request.data.get("name")
         email = request.data.get("email")
+        phone = request.data.get("phone")
+        service = request.data.get("service")
         message = request.data.get("message")
+
+        full_message = f"""
+        New Enquiry Received:
+
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
+        Service: {service}
+        Message:
+        {message}
+        """
 
         try:
             send_mail(
                 subject=f"New Enquiry from {name}",
-                message=f"Name: {name}\nEmail: {email}\nMessage:\n{message}",
+                message=full_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=["your-email@gmail.com"],
                 fail_silently=False,
             )
-            return Response({"message": "Enquiry sent successfully"}, status=status.HTTP_200_OK)
+            return Response({"message": "Enquiry sent successfully"}, status=status.HTTP_201_CREATED)
         except Exception as e:
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
