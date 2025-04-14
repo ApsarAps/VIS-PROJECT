@@ -4,6 +4,11 @@ import MonitorImage from "/src/assets/VIS New Layouts Images/VIS web development
 import StaticImg from "/src/assets/VIS New Layouts Images/Static web gif.png";
 import DynamicImg from "/src/assets/VIS New Layouts Images/dyanamic gif.png";
 import EcommerceImg from "/src/assets/VIS New Layouts Images/ecommerce gif.png";
+import Stage1 from "/src/assets/VIS New Layouts Images/project-management_1087927.png";
+import Stage2 from "/src/assets/VIS New Layouts Images/curve_2939047.png";
+import Stage3 from "/src/assets/VIS New Layouts Images/app-development_2335265.png";
+import Stage4 from "/src/assets/VIS New Layouts Images/usability-testing_17636773.png";
+import Stage5 from "/src/assets/VIS New Layouts Images/laptop_8083334.png";
 import PricingSection from "./PricingSection";
 import { webPlans } from "./PricingData";
 
@@ -106,6 +111,94 @@ const WebDevelopment = () => {
             alt="monitor"
             className="w-[300px] md:w-[380px]"
           />
+        </motion.div>
+        <motion.div
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-16 lg:flex-nowrap lg:justify-between lg:gap-12"
+        >
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-fit flex flex-col items-center shadow-xl rounded-md justify-center px-6 py-6 bg-[#FDEDEC] transition-all hover:scale-105 hover:shadow-2xl">
+            <img
+              src={Stage1}
+              alt=""
+              className="w-12 h-12 object-cover transition-all transform hover:rotate-12"
+            />
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="text-center w-28 mt-3 text-lg font-semibold text-[#5D5D5D]"
+            >
+              Requirement <br /> Stage
+            </motion.p>
+          </div>
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-fit flex flex-col items-center shadow-xl rounded-md justify-center px-6 py-6 bg-[#C8FADD] transition-all hover:scale-105 hover:shadow-2xl">
+            <img
+              src={Stage2}
+              alt=""
+              className="w-12 h-12 object-cover transition-all transform hover:rotate-12"
+            />
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="text-center w-28 mt-3 text-lg font-semibold text-[#5D5D5D]"
+            >
+              Design <br /> Stage
+            </motion.p>
+          </div>
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-fit flex flex-col items-center shadow-xl rounded-md justify-center px-6 py-6 bg-[#E3EDFF] transition-all hover:scale-105 hover:shadow-2xl">
+            <img
+              src={Stage3}
+              alt=""
+              className="w-12 h-12 object-cover transition-all transform hover:rotate-12"
+            />
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7, delay: 0.6 }}
+              className="text-center w-28 mt-3 text-lg font-semibold text-[#5D5D5D]"
+            >
+              Development <br /> Stage
+            </motion.p>
+          </div>
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-fit flex flex-col items-center shadow-xl rounded-md justify-center px-6 py-6 bg-[#FFF6D3] transition-all hover:scale-105 hover:shadow-2xl">
+            <img
+              src={Stage4}
+              alt=""
+              className="w-12 h-12 object-cover transition-all transform hover:rotate-12"
+            />
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7, delay: 0.7 }}
+              className="text-center w-28 mt-3 text-lg font-semibold text-[#5D5D5D]"
+            >
+              Testing <br /> Stage
+            </motion.p>
+          </div>
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-fit flex flex-col items-center shadow-xl rounded-md justify-center px-6 py-6 bg-[#D5EAFF] transition-all hover:scale-105 hover:shadow-2xl">
+            <img
+              src={Stage5}
+              alt=""
+              className="w-12 h-12 object-cover transition-all transform hover:rotate-12"
+            />
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.7, delay: 0.8 }}
+              className="text-center w-28 mt-3 text-lg font-semibold text-[#5D5D5D]"
+            >
+              Deployment <br /> Stage
+            </motion.p>
+          </div>
         </motion.div>
       </motion.div>
       <motion.div

@@ -40,7 +40,7 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 100, damping: 12 }}
         className="w-full fixed top-0 left-0 bg-white shadow-lg z-50"
       >
-        <div className="max-w-[1280px] mx-auto px-4 py-4 flex flex-wrap md:flex-nowrap items-center justify-between">
+        <div className="max-w-[1280px] mx-auto px-4 py-4 flex items-center justify-between flex-wrap md:flex-nowrap">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -57,7 +57,6 @@ const Navbar = () => {
               />
             </Link>
           </motion.div>
-
           <div className="md:hidden flex items-center justify-end w-full mt-4 md:mt-0">
             <button
               className="text-gray-700"
@@ -71,7 +70,6 @@ const Navbar = () => {
               </div>
             </button>
           </div>
-
           <div
             className={`${
               isOpen ? "block" : "hidden"
@@ -106,7 +104,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-[#0057FF] text-white font-semibold rounded hover:bg-[#004ae0] transition"
+              className="px-6 py-2 bg-[#0057FF] text-white cursor-pointer font-semibold rounded hover:bg-[#004ae0] transition mt-4 md:mt-0"
               onClick={() => setShowEnquiry(true)}
             >
               Enquiry
@@ -114,7 +112,6 @@ const Navbar = () => {
           </div>
         </div>
       </motion.nav>
-
       {showEnquiry && <EnquiryForm onClose={() => setShowEnquiry(false)} />}
     </>
   );
