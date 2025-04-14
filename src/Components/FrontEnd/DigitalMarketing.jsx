@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import digital from "/src/assets/VIS New Layouts Images/Digital marketing gif.gif";
 import seo from "/src/assets/VIS New Layouts Images/SEO GIF.gif";
-import smm from "/src/assets/VIS New Layouts Images/Static web gif.png";
+import smm from "/src/assets/VIS New Layouts Images/Social media gif.gif";
 import content from "/src/assets/VIS New Layouts Images/Content-Writer.gif";
 import strategy from "/src/assets/VIS New Layouts Images/Digital-Marketing plan.gif";
 import analytics from "/src/assets/VIS New Layouts Images/Google Analytics1.gif";

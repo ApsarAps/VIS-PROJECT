@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SoftwareImg from "/src/assets/VIS New Layouts Images/Static web gif.png";
+import SoftwareImg from "/src/assets/VIS New Layouts Images/sntsoftware..gif";
 import NativeImg from "/src/assets/VIS New Layouts Images/android-app-development.gif";
 import HybridImg from "/src/assets/VIS New Layouts Images/Hybrid -app-development gif.gif";
 import PwaImg from "/src/assets/VIS New Layouts Images/Beneficios-PWA.gif";
-import WearableImg from "/src/assets/VIS New Layouts Images/Static web gif.png";
+import WearableImg from "/src/assets/VIS New Layouts Images/Wearable img.gif";
 
 const fadeIn = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
