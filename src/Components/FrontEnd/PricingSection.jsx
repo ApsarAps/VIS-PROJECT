@@ -1,3 +1,4 @@
+// <--Pricing section-->
 import PlanCard from "./PlanCard";
 import { motion } from "framer-motion";
 

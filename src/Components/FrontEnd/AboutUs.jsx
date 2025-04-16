@@ -59,7 +59,7 @@ const AboutUs = () => {
   return (
     <section className="px-6 mt-20 py-20 md:px-20 bg-white text-black overflow-hidden">
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20 xl:grid-cols-2 xl:gap-16"
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -67,7 +67,7 @@ const AboutUs = () => {
       >
         <motion.div variants={fadeInLeft}>
           <motion.h2
-            className="text-[26px] md:text-[32px] font-semibold mb-4 leading-tight"
+            className="text-[26px] md:text-[32px] xl:text-[36px] font-semibold mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -75,7 +75,7 @@ const AboutUs = () => {
             <span className="text-[#0057FF] font-bold">About</span> Us
           </motion.h2>
           <motion.p
-            className="text-[16px] md:text-[18px] leading-[30px] text-[#000000] font-normal"
+            className="text-[16px] md:text-[18px] xl:text-[20px] leading-[30px] text-[#000000] font-normal"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -93,14 +93,15 @@ const AboutUs = () => {
           <motion.img
             src={AboutImage}
             alt="About Illustration"
-            className="max-w-[320px] w-full"
+            className="max-w-[320px] w-full xl:max-w-[400px]"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 200 }}
           />
         </motion.div>
       </motion.div>
+
       <motion.div
-        className="max-w-7xl py-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"
+        className="max-w-7xl py-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 xl:grid-cols-2 xl:gap-16"
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -120,7 +121,7 @@ const AboutUs = () => {
             <img src={VisionIcon} alt="Vision" className="w-14 p-2 h-14" />
           </motion.div>
           <motion.h3
-            className="text-lg font-bold mb-4 mt-2"
+            className="text-lg xl:text-xl font-bold mb-4 mt-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -128,7 +129,7 @@ const AboutUs = () => {
             Our <span className="text-[#0057FF]">Vision</span>
           </motion.h3>
           <motion.p
-            className="text-[15px] text-gray-800 leading-[28px]"
+            className="text-[15px] xl:text-[16px] text-gray-800 leading-[28px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -142,6 +143,7 @@ const AboutUs = () => {
             contributing to a digitally connected and efficient world.
           </motion.p>
         </motion.div>
+
         <motion.div
           className="bg-[#D5EAFF] p-8 pt-14 rounded-xl shadow-lg text-center relative"
           variants={fadeInUp}
@@ -156,7 +158,7 @@ const AboutUs = () => {
             <img src={MissionIcon} alt="Mission" className="w-14 p-2 h-14" />
           </motion.div>
           <motion.h3
-            className="text-lg font-bold mb-4 mt-2"
+            className="text-lg xl:text-xl font-bold mb-4 mt-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -164,7 +166,7 @@ const AboutUs = () => {
             Our <span className="text-[#0057FF]">Mission</span>
           </motion.h3>
           <motion.p
-            className="text-[15px] text-gray-700 leading-[28px]"
+            className="text-[15px] xl:text-[16px] text-gray-700 leading-[28px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}

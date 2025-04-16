@@ -1,5 +1,7 @@
+// <--Footer-->
 import React from "react";
 import { motion } from "framer-motion";
+import Logo from "/src/assets/VIS New Layouts Images/logo1.png";
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -46,11 +48,17 @@ const Footer = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
           variants={columnVariants}
+          className="flex flex-col items-center sm:items-start text-center sm:text-left"
         >
-          <h2 className="text-white font-bold text-2xl leading-tight mb-1 sm:mb-2">
+          <img
+            src={Logo}
+            alt="Vetri IT Systems Logo"
+            className="w-20 sm:w-24 md:w-28 bg-white rounded-full  lg:w-22 h-auto mb-2 sm:mb-4"
+          />
+          <h2 className="text-white font-bold text-2xl leading-tight sm:leading-snug">
             Vetri
           </h2>
-          <h2 className="text-white font-bold text-2xl mb-6">IT Systems</h2>
+          <h2 className="text-white font-bold text-2xl">IT Systems</h2>
         </motion.div>
 
         <motion.div

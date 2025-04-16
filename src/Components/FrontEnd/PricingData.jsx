@@ -1,3 +1,4 @@
+// <--Pricing Data-->
 export const webPlans = [
   {
     planName: "Basic Plan",
@@ -70,7 +71,6 @@ export const webPlans = [
   },
 ];
 
-// You can do the same for software & marketing plans
 export const DigitalPlans = [
   {
     planName: "Basic Plan",

@@ -1,3 +1,4 @@
+// <--Enquiry Form-->
 import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
@@ -110,7 +111,7 @@ const EnquiryForm = ({ onClose }) => {
             },
             {
               icon: <FaEnvelope />,
-              placeholder: "Enter Mail Id",
+              placeholder: "Enter Email Address ",
               type: "email",
               name: "email",
               value: formData.email,
